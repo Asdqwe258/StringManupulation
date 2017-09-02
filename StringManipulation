@@ -1,1 +1,39 @@
+import java.util.Scanner;
 
+
+public class StringManipulation {
+
+	
+	
+	public static String response(String input) {
+		//for detecting keywords and assigning responses
+		
+		return null;
+	}
+	
+	public String randomresponse() {
+		//for when user input does not contain keywords
+		
+		return null;
+	} 
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("hello and stuff");
+		while(true){
+			//the loop
+			
+			if(input.toString() != "null") {
+			//checks if user is inputting anything
+				
+				System.out.println(response(input.next()));			
+			
+			}		
+			
+		}
+
+	}
+
+}
