@@ -7,20 +7,19 @@ public class StringManipulation {
 	
 	public static String response(String input) {
 		//for detecting keywords and assigning responses
-		String user = input.toString();
 		String output = "default";
-		if(user != "null") {
+		if(input != "null") {
 			//checks if user is inputting anything
-			if(user.indexOf("bleh") >= 0){
+			if(input.indexOf("bleh") >= 0){
 				//example of keyword detection
 				output = "response";
 				return output;
 			}
-			else if(user.indexOf("bule") >= 0){
+			else if(input.indexOf("bule") >= 0){
 				output = "ponse";
 				return output;
 			}
-			else if(user.indexOf("blue") >= 0){
+			else if(input.indexOf("blue") >= 0){
 				output = "respants";
 				return output;
 			}
@@ -35,7 +34,7 @@ public class StringManipulation {
 			output = "nuuuuuuulllllll";
 			return output;
 		}
-		return output;
+
 	}
 	
 	public static String randomresponse() {
@@ -44,20 +43,16 @@ public class StringManipulation {
 		String hey = "";
 		//hey is the output response
 		if(random.nextInt(4) == 0){
-			System.out.println(0);
-			hey = "";
+			hey = "0";
 		}
 		else if(random.nextInt(4) == 1){
-			System.out.println(1);
-			hey = "";
+			hey = "1";
 		}
 		else if(random.nextInt(4) == 2){
-			System.out.println(2);
-			hey = "";
+			hey = "2";
 		}
 		else if(random.nextInt(4) == 3){
-			System.out.println(3);
-			hey = "";
+			hey = "3";
 		}
 		
 		return hey;
@@ -70,7 +65,7 @@ public class StringManipulation {
 		System.out.println("hello and stuff");
 		while(true){
 			//the loop
-				System.out.println(response(input.next()));			
+				System.out.println(response(input.nextLine()));			
 		}
 
 	}
