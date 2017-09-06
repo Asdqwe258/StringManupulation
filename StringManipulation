@@ -10,17 +10,31 @@ public class StringManipulation {
 		String output = "default";
 		if(input != "null") {
 			//checks if user is inputting anything
-			if(input.indexOf("bleh") >= 0){
+			if(input.indexOf("Eh") >= 0){
 				//example of keyword detection
-				output = "response";
+				output = "Ah... Could be worse then.";
 				return output;
 			}
-			else if(input.indexOf("bule") >= 0){
-				output = "ponse";
+			else if(input.indexOf("work") >= 0){
+				if(input.indexOf("chat") >= 0){
+					if(input.indexOf("bot") >= 0){
+						output = "This chat bot is indeed working";
+						return output;
+					}
+					return output;
+				}
 				return output;
 			}
 			else if(input.indexOf("blue") >= 0){
 				output = "respants";
+				return output;
+			}
+			else if(input.indexOf("Hello") >= 0){
+				output = "Anyways, how are you?";
+				return output;
+			}
+			else if(input.indexOf("Good") >= 0){
+				output = "That is good.";
 				return output;
 			}
 			else{
@@ -62,7 +76,7 @@ public class StringManipulation {
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("hello and stuff");
+		System.out.println("Hello there");
 		while(true){
 			//the loop
 				System.out.println(response(input.nextLine()));			
