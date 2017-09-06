@@ -7,29 +7,42 @@ public class StringManipulation {
 	
 	public static String response(String input) {
 		//for detecting keywords and assigning responses
-		
-		return null;
+		String user = input.toString();
+		String output = "";
+		if(user != "null") {
+			//checks if user is inputting anything
+			if(user.indexOf("bleh") > 0){
+				//example of keyword detection
+				output = "";
+			}
+			
+		}
+		return output;
 	}
 	
 	public static String randomresponse() {
 		//for when user input does not contain keywords
 		Random random = new Random();
-		
+		String hey = "";
+		//hey is the output response
 		if(random.nextInt(4) == 0){
 			System.out.println(0);
+			hey = "";
 		}
 		else if(random.nextInt(4) == 1){
-			
 			System.out.println(1);
+			hey = "";
 		}
 		else if(random.nextInt(4) == 2){
 			System.out.println(2);
+			hey = "";
 		}
 		else if(random.nextInt(4) == 3){
 			System.out.println(3);
+			hey = "";
 		}
 		
-		return null;
+		return hey;
 	} 
 	
 	public static void main(String[] args) {
@@ -39,18 +52,10 @@ public class StringManipulation {
 		System.out.println("hello and stuff");
 		while(true){
 			//the loop
-			
-			if(input.toString() != "null") {
-			//checks if user is inputting anything
-				
 				System.out.println(response(input.next()));			
-			
-				
-				
-			}		
-			
 		}
 
 	}
 
 }
+
