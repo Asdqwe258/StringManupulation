@@ -8,17 +8,27 @@ public class StringManipulation {
 	public static String response(String input) {
 		//for detecting keywords and assigning responses
 		String user = input.toString();
-		String output = "";
+		String output = "default";
 		if(user != "null") {
 			//checks if user is inputting anything
 			if(user.indexOf("bleh") >= 0){
 				//example of keyword detection
-				output = "Works";
+				output = "response";
 			}
-			else {
-				output = "I don't understand what you said.";
+			else if(user.indexOf("bule") >= 0){
+				output = "ponse";
+			}
+			else if(user.indexOf("blue") >= 0){
+				output = "respants";
+			}
+			else{
+				output = randomresponse();
+				//if no keywords are detected
 			}
 			
+		}
+		else {
+			output = "nuuuuuuulllllll";
 		}
 		return output;
 	}
