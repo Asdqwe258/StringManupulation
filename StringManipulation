@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Random;
 
 public class StringManipulation {
 
@@ -11,8 +11,23 @@ public class StringManipulation {
 		return null;
 	}
 	
-	public String randomresponse() {
+	public static String randomresponse() {
 		//for when user input does not contain keywords
+		Random random = new Random();
+		
+		if(random.nextInt(4) == 0){
+			System.out.println(0);
+		}
+		else if(random.nextInt(4) == 1){
+			
+			System.out.println(1);
+		}
+		else if(random.nextInt(4) == 2){
+			System.out.println(2);
+		}
+		else if(random.nextInt(4) == 3){
+			System.out.println(3);
+		}
 		
 		return null;
 	} 
@@ -30,6 +45,8 @@ public class StringManipulation {
 				
 				System.out.println(response(input.next()));			
 			
+				
+				
 			}		
 			
 		}
