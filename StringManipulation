@@ -8,7 +8,10 @@ public class StringManipulation {
 	public static String response(String input) {
 		//for detecting keywords and assigning responses
 		String user = input.toString();
-		String output = "Are you there? Your lack of a response worries me.";
+		String output = "";
+		if (user.indexOf("") >= 0){
+		output = "Are you there? Your lack of a response worries me.";
+		}
 		if(user != "null") {
 			//checks if user is inputting anything
 			if(user.indexOf("bleh") >= 0){
