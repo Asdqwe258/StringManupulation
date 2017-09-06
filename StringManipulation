@@ -9,14 +9,14 @@ public class StringManipulation {
 		//for detecting keywords and assigning responses
 		String user = input.toString();
 		String output = "";
-		if (user.indexOf("") >= 0){
-		output = "Are you there? Your lack of a response worries me.";
-		}
 		if(user != "null") {
 			//checks if user is inputting anything
 			if(user.indexOf("bleh") >= 0){
 				//example of keyword detection
 				output = "Works";
+			}
+			else {
+				output = "I don't understand what you said.";
 			}
 			
 		}
