@@ -1,0 +1,21 @@
+INDEX VERSION 1.126+C:\Users\1431695\StringManipulation\.metadata\.plugins\org.eclipse.jdt.core
+976639436.index
+3748187462.index
+4002347327.index
+4020591375.index
+3017978677.index
+8144747.index
+801767645.index
+425557641.index
+2605753512.index
+483060846.index
+1605050771.index
+3942250804.index
+1813300556.index
+3601087176.index
+104587180.index
+1557531465.index
+2388575630.index
+361095803.index
+4104040832.index
+1664433948.index
