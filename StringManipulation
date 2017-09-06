@@ -14,21 +14,26 @@ public class StringManipulation {
 			if(user.indexOf("bleh") >= 0){
 				//example of keyword detection
 				output = "response";
+				return output;
 			}
 			else if(user.indexOf("bule") >= 0){
 				output = "ponse";
+				return output;
 			}
 			else if(user.indexOf("blue") >= 0){
 				output = "respants";
+				return output;
 			}
 			else{
 				output = randomresponse();
 				//if no keywords are detected
+				return output;
 			}
 			
 		}
 		else {
 			output = "nuuuuuuulllllll";
+			return output;
 		}
 		return output;
 	}
