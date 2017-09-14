@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class StringManipulation {
 
-	
+	//add .equals, .substring, .length,
 	
 	public static String response(String input) {
 		//for detecting keywords and assigning responses
