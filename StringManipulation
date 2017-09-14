@@ -3,15 +3,30 @@ import java.util.Random;
 
 public class StringManipulation {
 
-	//add .equals, .substring, .length,
 	
+	private static Scanner input;
+
 	public static String response(String input) {
 		//for detecting keywords and assigning responses
 		String output = "default";
 		if(input != "null") {
-			//checks if user is inputting anything
-			if(input.indexOf("Eh") >= 0){
+			//checks if user input is valid
+			if(input.indexOf("I like ") >= 0) {
+				output = "Hey, I like" + input.substring(input.indexOf("I like ") + 6, input.length()) + " too!";
+				return output;
+			}
+			else if(input.indexOf("bad") >= 0) {
 				//example of keyword detection
+				output = "Well, I'm sorry to hear that.";
+				return output;
+			}
+			
+			else if(input.indexOf("not good") >= 0) {
+				output = "Not good? Well, it seems like you've misused an exclaimation mark to me!";
+				return output;
+			}
+			
+			else if(input.indexOf("Eh") >= 0){
 				output = "Ah... Could be worse then.";
 				return output;
 			}
@@ -26,7 +41,7 @@ public class StringManipulation {
 				return output;
 			}
 			else if(input.indexOf("blue") >= 0){
-				output = "respants";
+				output = "What did you just say? Sorry, I just really like the color blue.";
 				return output;
 			}
 			else if(input.indexOf("Hello") >= 0){
@@ -37,6 +52,11 @@ public class StringManipulation {
 				output = "That is good.";
 				return output;
 			}
+			else if(input.equals("")) {
+				//checks if user does not input anything
+				output =  "All work and no play makes Danny a null boy.";
+				return output;
+			}
 			else{
 				output = randomresponse();
 				//if no keywords are detected
@@ -45,7 +65,7 @@ public class StringManipulation {
 			
 		}
 		else {
-			output = "nuuuuuuulllllll";
+			output = "All work and no play makes Danny a null boy.";
 			return output;
 		}
 
@@ -54,19 +74,19 @@ public class StringManipulation {
 	public static String randomresponse() {
 		//for when user input does not contain keywords
 		Random random = new Random();
-		String hey = "";
+		String hey = "I'm not sure what I think about that...";
 		//hey is the output response
 		if(random.nextInt(4) == 0){
-			hey = "0";
+			hey = "I think I get what you're saying.";
 		}
 		else if(random.nextInt(4) == 1){
-			hey = "1";
+			hey = "Well, I'm happy I'm able to talk to you.";
 		}
 		else if(random.nextInt(4) == 2){
-			hey = "2";
+			hey = "Thats somewhat interesting, I guess...";
 		}
 		else if(random.nextInt(4) == 3){
-			hey = "3";
+			hey = "How about you ask me something else?";
 		}
 		
 		return hey;
@@ -74,8 +94,8 @@ public class StringManipulation {
 	
 	public static void main(String[] args) {
 		
-		Scanner input = new Scanner(System.in);
-		
+		input = new Scanner(System.in);
+		//Scanner for user input
 		System.out.println("Hello there");
 		while(true){
 			//the loop
