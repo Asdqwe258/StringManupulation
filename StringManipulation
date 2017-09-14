@@ -14,8 +14,13 @@ public class StringManipulation {
 		String output = "default";
 		if(input != "null") {
 			//checks if user input is valid
-			if(input.indexOf("I like ") >= 0) {
-				output = "Hey, I like" + input.substring(input.indexOf("I like ") + 6, input.length()) + " too!";
+			if(input.indexOf("I like") >= 0) {
+				if((input.length() == input.indexOf("I like") + 6) || ((input.lastIndexOf(" ") == input.length() - 1) && (input.lastIndexOf(" ") ==(input.indexOf("I like") + 6) ))) {
+					// this is a catch for weird answers, but it doesn't get everything, namely strings with more than one space at the end
+					output = "So, what do you like?";
+					return output;
+				}
+				output = "Hey, I like" + input.substring(input.indexOf("I like") + 6, input.length()) + " too!";
 				return output;
 			}
 			else if(input.indexOf("bad") >= 0) {
